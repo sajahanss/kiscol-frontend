@@ -3,7 +3,7 @@ import { useState } from 'react'
 import './Roomadmin.css'
 import axios from 'axios';
 import avtr from '../Image/booking/superiorroom.jpg'
-
+import { Link } from 'react-router-dom';
 export function Roomsdetail(){
   const [totroom,settotroom]=useState(30);
   const [bookedroomdata,setbookedroomdata]=useState([]);
@@ -219,7 +219,7 @@ const Roomadmin = () => {
       }
     </div>
     <div className='Header-bar-button'>
- <a className='btn btn-dark w-75' href='/Adminkiscol'>Back To Admin Page</a>
+ <Link className='btn btn-dark w-75' href='/Adminkiscol'>Back To Admin Page</Link>
  </div>
     </div>
   )
