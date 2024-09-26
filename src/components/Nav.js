@@ -55,9 +55,9 @@ function Nav() {
   return (
     <div>
        
-       <a className='bkbutton' href='/booking'>
+       <Link className='bkbutton' to='/booking'>
         Click Here to Book Now
-     </a>
+     </Link>
       <Disclosure as="nav" className="bg-gray-800">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 md:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
@@ -87,9 +87,9 @@ function Nav() {
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
                 {navigation.map((item) => (
-                  <a
+                  <Link
                     key={item.name}
-                    href={item.href}
+                    to={item.href}
                      onClick={(e)=>handleclick(item)}
                     aria-current={item.current ? 'page' : undefined}
                       className={classNames(
@@ -103,7 +103,7 @@ function Nav() {
                     // }}
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -141,24 +141,24 @@ function Nav() {
               >
               {isAuthenticated()?<MenuItem>
               {getUseremail() === 'admin@admin.in' ?
-                <a href="/Adminkiscol" className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
+                <Link to="/Adminkiscol" className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
                 Administration
-              </a>: 
-              <a href="/profile" className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
+              </Link>: 
+              <Link to="/profile" className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
                     Your Profile
-                  </a>
+                  </Link>
                 }
                  
                 </MenuItem> :null}
                 {/* {isAuthenticated()? <MenuItem>
-                  <a href="#" className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
+                  <Link to="#" className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
                     Settings
-                  </a>
+                  </Link>
                 </MenuItem>:null} */}
                 {isAuthenticated()? <MenuItem>
-                  <a href="/" className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100" onClick={logoutUser} style={{cursor:"pointer"}}>
+                  <Link to="/" className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100" onClick={logoutUser} style={{cursor:"pointer"}}>
                     Sign out
-                  </a>
+                  </Link>
                 </MenuItem>:null}
                 {!isAuthenticated()?<MenuItem>
                   <Link to="/login" className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
@@ -166,9 +166,9 @@ function Nav() {
                   </Link>
                 </MenuItem>:null}
                 {!isAuthenticated()?<MenuItem>
-                  <a href="/register" className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
+                  <Link to="/register" className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
                     Register
-                  </a>
+                  </Link>
                 </MenuItem>:null}
                 
               </MenuItems>
