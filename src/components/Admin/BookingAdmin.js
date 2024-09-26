@@ -114,7 +114,7 @@ const BookingAdmin = () => {
         
         <div className="order__history__container2">
         <div className='Header-bar-button'>
-            <Link className='btn btn-dark w-75' href='/Adminkiscol'>Back To Admin Page</Link>
+            <Link className='btn btn-dark w-75' to='/Adminkiscol'>Back To Admin Page</Link>
          </div>
                 <div className="order__history2">
                     <div className="order__history__header2 fs-1 text-center m-3">Booking Information </div>
