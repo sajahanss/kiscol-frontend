@@ -11,12 +11,12 @@ import { Link } from 'react-router-dom';
 
 const navigation = [
     { name: 'Home', to: '/', current: false },
-    { name: 'Reservations', href: '/reservation', current: false },
+    { name: 'Reservations', to: '/reservation', current: false },
     { name: 'Facilities', to: '/Facilities', current: false },
     { name: 'Rooms', to: '/rooms', current: false },
     { name: 'Dining & Bar', to: '/dining', current: false},
     { name: 'Banquets', to: '/banquets', current: false},
-    { name: 'Photo & Virtual Tour', href: '/photos', current: false},
+    { name: 'Photo & Virtual Tour', to: '/photos', current: false},
     { name: 'Contact-Us', to: '/about', current: false},
     { name: 'Enquiry', to: '/enquiry', current: false}
   ]
