@@ -10,15 +10,15 @@ import { Link } from 'react-router-dom';
 
 
 const navigation = [
-    { name: 'Home', href: '/', current: false },
+    { name: 'Home', to: '/', current: false },
     { name: 'Reservations', href: '/reservation', current: false },
-    { name: 'Facilities', href: '/Facilities', current: false },
-    { name: 'Rooms', href: '/rooms', current: false },
-    { name: 'Dining & Bar', href: '/dining', current: false},
-    { name: 'Banquets', href: '/banquets', current: false},
+    { name: 'Facilities', to: '/Facilities', current: false },
+    { name: 'Rooms', to: '/rooms', current: false },
+    { name: 'Dining & Bar', to: '/dining', current: false},
+    { name: 'Banquets', to: '/banquets', current: false},
     { name: 'Photo & Virtual Tour', href: '/photos', current: false},
-    { name: 'Contact-Us', href: '/about', current: false},
-    { name: 'Enquiry', href: '/enquiry', current: false}
+    { name: 'Contact-Us', to: '/about', current: false},
+    { name: 'Enquiry', to: '/enquiry', current: false}
   ]
 
   
@@ -89,7 +89,7 @@ function Nav() {
                 {navigation.map((item) => (
                   <Link
                     key={item.name}
-                    to={item.href}
+                    to={item.to}
                      onClick={(e)=>handleclick(item)}
                     aria-current={item.current ? 'page' : undefined}
                       className={classNames(
