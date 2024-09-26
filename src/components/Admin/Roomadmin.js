@@ -219,7 +219,7 @@ const Roomadmin = () => {
       }
     </div>
     <div className='Header-bar-button'>
- <Link className='btn btn-dark w-75' href='/Adminkiscol'>Back To Admin Page</Link>
+ <Link className='btn btn-dark w-75' to='/Adminkiscol'>Back To Admin Page</Link>
  </div>
     </div>
   )
