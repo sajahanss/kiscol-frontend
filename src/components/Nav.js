@@ -6,7 +6,7 @@ import { useState } from 'react'
 import {getUserName,getprofilepic,getUseremail} from './services/Storage'
 
 import { logout,isAuthenticated } from './services/Auth'
-
+import { Link } from 'react-router-dom';
 
 
 const navigation = [
@@ -161,9 +161,9 @@ function Nav() {
                   </a>
                 </MenuItem>:null}
                 {!isAuthenticated()?<MenuItem>
-                  <a href="/login" className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
+                  <Link to="/login" className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
                     Login
-                  </a>
+                  </Link>
                 </MenuItem>:null}
                 {!isAuthenticated()?<MenuItem>
                   <a href="/register" className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
